@@ -34,9 +34,18 @@ bash build.command
 
 The result is **dist/Instagram Downloader.app**. The app is built for the current Mac architecture and targets macOS 13 or later. It uses a local ad hoc signature and is not notarized by Apple.
 
-## First launch on macOS
+## macOS first-launch security warning
 
-Because the app is not notarized by Apple, macOS may block its first launch. In Finder, Control-click **Instagram Downloader.app**, choose **Open**, then choose **Open** again. This is needed only once. Do not disable Gatekeeper globally.
+When you first open the downloaded app, macOS may show a message saying Apple cannot verify that **Instagram Downloader** is free of malware. This warning is expected: this release is not notarized by Apple, so macOS cannot verify it through Apple's notarization service. The warning does not by itself mean the app contains malware.
+
+If you downloaded the app from this repository's official [latest release](https://github.com/Quick-Eyed-Sky/Instagram-Downloader/releases/latest) and choose to run it:
+
+1. Click **Done** in the warning dialog.
+2. Open **System Settings → Privacy & Security**.
+3. Scroll down to the **Security** section and click **Open Anyway** next to Instagram Downloader.
+4. Confirm that you want to open the app.
+
+macOS shows **Open Anyway** after the first blocked launch, and the option may only be available for a limited time. You can also Control-click the app in Finder, choose **Open**, then confirm. You only need to approve the app once. Do not disable Gatekeeper globally. If you did not get the app from the official release, do not bypass the warning.
 
 ## First use
 
